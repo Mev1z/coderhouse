@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/stilos.css">
+    <title>Muebles del Maule</title>
+    <link rel="shortcut icon" href="../images/logoMuebles.jpg" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <img src="../images/logoMuebles.jpg" alt="logo empresa" class="logoMuebles">
+        <ul>
+            <li><a href="contact.html" class="menu_vertical">Contacto</a></li>
+            <li><a href="obra.html" class="menu_vertical">Obra</a></li>
+            <li><a href="personal.html" class="menu_vertical">Personal</a></li>
+            <li><a href="productos.html" class="menu_vertical">Productos</a></li>
+            <li><a href="../index.html" class="menu_vertical">Inicio</a></li>
+        </ul>
+        <a href="#pie" class="menu_vertical">Final de Página</a>
+    </header>
+
+    <h1 class="titulo">Muebles del Maule</h1>
+
+    <form action="submit-form.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="nombre" name="nombre" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="message">Message:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+    
+        <input type="submit" value="Enviar">
+      </form>
+  
+      <footer id="pie">
+        <a href="https://www.instagram.com/">
+            <img src="../images/logoInstagram.png" alt="logo instagram" class="logoInstagram">
+        </a>
+    </footer>
+
+</body>
+</html>

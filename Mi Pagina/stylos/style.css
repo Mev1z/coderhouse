@@ -1,0 +1,176 @@
+body{
+  background-color:#0D0626;
+  color: white;
+  max-width: 1000px;77467971-5
+  min-width: 100px;
+  min-height: 1000px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+#logo_muebles{
+  width: 75px;
+  height: 75px;
+  float: left;
+  padding-left: 2px;
+  padding-top: 2px;
+}
+.user_entrance{
+  width: 75px;
+  height: 50px;
+  background: #383080;
+  border-radius: 10px;
+  margin: 5px;
+  float: right;
+}
+a.user_entrance{
+  color: white;
+  text-decoration: none;
+  float: none;
+}
+.entrance{
+  margin: auto;
+  min-width: 25px;
+  width: 50px;
+  max-width: 100px;
+  min-height: 25px;
+  height: 50px;
+  max-height: 100px;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+#title{
+  width: 80%;
+  height: 90px;
+  margin: 0 auto;
+  align-items: center;
+  align-content: center;
+}
+.mdm{
+  box-sizing: border-box;
+  width: 100%;
+  height: 90px;
+  margin: 0px;
+  font-size: 7vw;
+  align-self: center;
+  align-items:center;
+  align-content: center;
+  text-align: center;
+
+}
+@media only screen and (max-width: 100px) {
+  .mdm{
+    width: 100%;
+    height: 90px;
+  }
+}
+.mdmspa{
+  box-sizing: border-box;
+  width: 5%;
+  height: 15px;
+  margin: 0 auto;
+  font-size: 10px;
+  float: right;
+  position: sticky;
+  text-align: center;
+}
+.contact_form{
+  width: 30%;
+  height: 200px;
+  align-items: center;
+  margin: 1px;
+  align-self: center;
+  align-content: center;
+  float: none;
+  position: absolute;
+  bottom: 5px;
+  text-align: left;
+}
+.email{
+
+}
+/*houses*/
+.map{
+  width: 45%;
+  height: 450px;
+  background-color: #4315E8;
+  position: relative;
+}
+.casas{
+  text-align: center;
+  font-size: 1vw;
+  align-content: center;
+  margin: 3px 3px 3px 3px;
+  align-self: center;
+}
+.house{
+  background-color: #5D30FF;
+  width: 45px;
+  height: 45px;
+  margin: 2px 2px 2px 2px;
+  align-items: center;
+  float: none;
+  position: inherit;
+  float: left;
+}
+a.casas{
+  color: white;
+  text-decoration: none;
+  float: none;
+}
+/*obras*/
+img.img_kitchen{
+  width: 30px;
+  height: 30px;
+  border-color: #F5E44C;
+  border-spacing: 1px;
+}
+img.img_room{
+  width: 30px;
+  height: 30px;
+  border-color: #F5E44C;
+  border-spacing: 1px;
+}
+img.img_secondroom{
+  width: 30px;
+  height: 30px;
+  border-color: #F5E44C;
+  border-spacing: 1px;
+}
+img.first_bathroom{
+  width: 30px;
+  height: 30px;
+  border-color: #F5E44C;
+  border-spacing: 1px;
+}
+img.second_bathroom{
+  width: 30px;
+  height: 30px;
+  border-color: #F5E44C;
+  border-spacing: 1px;
+}
+hr.horizontal_line{
+  width: 2px;
+  height: 2px;
+}
+/*loading wheel*/
+div.loading_wheel{
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*Kitchen elements*/
+class.kitchen_furniture {
+  display: inline-table;
+}

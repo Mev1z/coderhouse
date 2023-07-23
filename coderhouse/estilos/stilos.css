@@ -1,0 +1,345 @@
+/*Afecta a todas las paginas*/
+body{
+    background-color:#1F1701;
+    width: 90vw;
+    min-width: 30vw;
+    padding: 1rem;
+    color: aliceblue;
+}
+/*Afecta al menu*/
+#menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.contact{
+    padding:1rem ;
+    background-color: #AF7595;
+    color: aliceblue;
+    width: 58px;
+    height: fit-content;
+    margin: 2px;
+}
+.obra{
+    padding:1rem ;
+    background-color: #AF7595;
+    color: aliceblue;
+    width: 58px;
+    height: fit-content;
+    margin: 2px;
+}
+.personal{
+    padding:1rem ;
+    background-color: #AF7595;
+    color: aliceblue;
+    width: 58px;
+    height: fit-content;
+    margin: 2px;
+}
+.productos{
+    padding:1rem ;
+    background-color: #AF7595;
+    color: aliceblue;
+    width: 58px;
+    height: fit-content;
+    margin: 2px;
+}
+.ingreso{
+    padding:1rem ;
+    background-color: #AF7595;
+    color: aliceblue;
+    width: 58px;
+    height: fit-content;
+    margin: 2px;
+}
+.titulo{
+    color: #FFFCFF;
+}
+/*Aqui hace referencia a la pagina de personal*/
+.bienvenida{
+    color: #FFFCFF;
+}
+h3{
+    color: #FFFCFF;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+div.datos_personales{
+    display: flex;
+}
+.imagen{
+    margin: 5px;
+}
+.calendarios{
+    align-items: center;
+    margin: 5px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div.textos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px 2px 2px 2px;
+}
+h3.nombre{
+    color: #FFFCFF;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    width: fit-content;
+    display: inline-block;
+}
+h3.rut{
+    color: #FFFCFF;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    width: fit-content;
+    display: inline-block;
+}
+h3.direccion{
+    color: #FFFCFF;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    width: fit-content;
+    display: inline-block;
+}
+.tareas{
+    border-radius: 30px;
+    border: 2px solid #A94700;
+    background: #0E0202;
+    width: 75vw;
+    height: 25vh;
+    overflow: scroll;
+    display: list-item;
+}
+.fechas_pago{
+    border-radius: 30px;
+    border: 2px solid #A94700;
+    background: #0E0202;
+    width: 25vw;
+    height: 25vh;
+    overflow: visible;
+    position: relative;
+}
+.proximo_pago{
+    width: 100%;
+    height: 100%;
+    color: #FFFCFF;
+}
+/*Aqui hace referencia a los logos*/
+.logoInstagram{
+    width: 25px;
+}
+.logoMuebles{
+    max-width: 100px;
+}
+/*Se hace referencia a la pagina de ingreso*/
+#ingreso{
+    width: 50vw;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*Se hace referencia a la pagina de obra*/
+.plano{
+    width: 50vw;
+    height: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "CB-T320 sala-multiusoK CB-T122 CB-T224 CB-T426 CB-T128 sala-multiusoP sala-multiusoP"
+        "CA-T319 sala-multiusoK CA-T121 CA-T223 CA-T425 CA-T127 sala-multiusoP sala-multiusoP"
+        "CB-T418 street         street  street  street  street  street         CB-T430"
+        "CA-T417 street         street  street  street  street  street         CA-T429"
+        "CB-T316 street         street  street  street  street  street         CB-T132"
+        "CA-T315 street         street  street  street  street  street         CA-T131"
+        "CB-T114 street         street  street  street  street  street         CB-T234"
+        "CA-T113 street         street  street  street  street  street         CA-T233"
+        "CB-T312 street         CB-T464 CB-T452 street  CB-T140 CB-T138        CB-T436"
+        "CA-T311 street         CA-T463 CA-T451 street  CA-T139 CA-T137        CA-T435"
+        "CB-T410 street         CB-T366 CB-T354 street  CB-T442"
+        "CA-T49  street         CA-T365 CA-T353 street  CA-T441"
+        "CB-T38  street         CB-T268 CB-T256 street  CB-T344"
+        "CA-T37  street         CA-T267 CA-T255 street  CA-T343"
+        "CB-T16  street         CB-T170 CB-T158 street  CB-T146"
+        "CA-T15  street         CA-T169 CA-T157 street  CA-T145"
+        "CB-T34  street         CB-T372 CB-T360 street  CB-T348"
+        "CA-T33  street         CA-T371 CA-T359 street  CA-T347"
+        "CB-T42  street         CB-T474 CB-T462 street  CB-T450"
+        "CA-T41  street         CA-T473 CA-T461 street  CA-T449";
+}
+.CA-T131{
+    grid-area: CA-T131;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CA-T315{
+    grid-area: CA-T315;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CB-T132{
+    grid-area: CB-T132;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CB-T316{
+    grid-area: CB-T316;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CA-T429{
+    grid-area: CA-T429;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CA-T417{
+    grid-area: CA-T417;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CB-T430{
+    grid-area: CB-T430;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CB-T418{
+    grid-area: CB-T418;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CA-T127{
+    grid-area: CA-T127;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CA-T425{
+    grid-area: CA-T425;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CA-T223{
+    grid-area: CA-T223;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CA-T121{
+    grid-area: CA-T121;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CB-T320{
+    grid-area: CB-T320;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CA-T319{
+    grid-area: CA-T319;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.sala-multiusoK{
+    grid-area: sala-multiusoK;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.sala-multiusoP{
+    grid-area: sala-multiusoP;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CB-T122{
+    grid-area: CB-T122;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CB-T224{
+    grid-area: CB-T224;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CB-T426{
+    grid-area: CB-T426;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.CB-T128{
+    grid-area: CB-T128;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.street{
+    grid-area: street;
+    background-color: #78797a;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+
