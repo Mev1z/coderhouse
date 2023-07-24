@@ -3,14 +3,68 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="../estilos/stilos.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../../estilos/stilos.css">
         <title>Pareo CB-T3 20</title>
-        <link rel="shortcut icon" href="./images/logoMuebles.jpg" type="image/x-icon">
+        <link rel="shortcut icon" href="../../images/logoMuebles.jpg" type="image/x-icon">
+
+        <style>
+            #costadoA-ocultar{
+                display: none;
+            }
+        </style>
     </head>
 <body>
-    
+    <a href="../../index.html" class="inicio"><img src="../../images/logoMuebles.jpg" alt="logo empresa" class="logoMuebles"></a>
+    <header><!-- Menu -->
+        <nav id="menu">
+           <a href="../../index.html" class="inicio"><img src="../../images/logoMuebles.jpg" alt="logo empresa" class="logoMuebles"></a>
+      
+           <a href="../contact.html" class="contact">Contacto</a>
+           <a href="../obra.html" class="obra">Obra</a>
+           <a href="../personal.html" class="personal">Personal</a>
+           <a href="../productos.html" class="productos">Productos</a>
+           <a href="../ingreso.html" class="ingreso">Ingreso</a>
+       </nav>
+    </header>
+    <p>Bienvenido al Pareo CB-T3 20</p>
+    <div class="cocina">
+        <p>Cocina</p>
+        <!-- Aqui va un objeto 3d con cada uno de los muebles de la cocina -->
+        <button id="costadoA-mostrar" type="button">Costado</button>
+            <div id="costadoA-ocultar">
+                    <ul>
+                        <li>
+                            <input type="text" placeholder="Alto" class="alto">
+                        </li>
+                        <li>
+                            <input type="text" placeholder="Ancho" class="ancho">
+                        </li>
+                        <li class="enchapes">
+                            <input type="text" placeholder="enchape1" class="enchape1">
+                            <input type="text" placeholder="enchape2" class="enchape2">
+                            <input type="text" placeholder="enchape3" class="enchape3">
+                            <input type="text" placeholder="enchape4" class="enchape4">
+                        </li>          
+                        <li>
+                            <input type="submit" name="Enviar">
+                        </li>              
+                    </ul>
+             </div>
+        <script>
+            document.getElementById("costadoA-mostrar").addEventListener("click", function() {
+                var object = document.getElementById("costadoA-ocultar");
+                if (object.style.display === "none") {
+                    object.style.display = "block";
+                } else {
+                    object.style.display = "none";
+                }
+            });
+        </script>
+    </div>
+    <div class="closet">
+        <p>Habitación</p>
+        <!-- Aqui va un objeto 3d con cada uno de los muebles que componen el closet-->
+    </div>
 </body>
 </html>

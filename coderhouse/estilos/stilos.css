@@ -342,4 +342,60 @@ h3.direccion{
     text-align: center;
     margin: 1px;
 }
-
+.costadoA-ocultar{
+    display: grid;
+    grid-template-areas:
+    "alto     alto     ancho    ancho" 
+    "enchape1 enchape2 enchape3 enchape4"
+    ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.enchape1{
+    grid-area: enchape1;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.enchape2{
+    grid-area: enchape2;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.enchape3{
+    grid-area: enchape3;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.enchape4{
+    grid-area: enchape4;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.alto{
+    grid-area: alto;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
+.ancho{
+    grid-area: ancho;
+    background-color: #224870;
+    color: #B0A204;
+    font-size:.6em;
+    text-align: center;
+    margin: 1px;
+}
