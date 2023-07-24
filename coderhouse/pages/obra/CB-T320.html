@@ -12,6 +12,19 @@
             #costadoA-ocultar{
                 display: none;
             }
+            #costadoB-ocultar{
+                display: none;
+            }
+            #repisa1-ocultar{
+                display: none;
+            }
+            #repisa2-ocultar{
+                display: none;
+            }
+            #lavaplato-ocultar{
+                display: none;
+            }
+
         </style>
     </head>
 <body>
@@ -31,29 +44,147 @@
     <div class="cocina">
         <p>Cocina</p>
         <!-- Aqui va un objeto 3d con cada uno de los muebles de la cocina -->
-        <button id="costadoA-mostrar" type="button">Costado</button>
-            <div id="costadoA-ocultar">
-                    <ul>
-                        <li>
-                            <input type="text" placeholder="Alto" class="alto">
-                        </li>
-                        <li>
-                            <input type="text" placeholder="Ancho" class="ancho">
-                        </li>
-                        <li class="enchapes">
-                            <input type="text" placeholder="enchape1" class="enchape1">
-                            <input type="text" placeholder="enchape2" class="enchape2">
-                            <input type="text" placeholder="enchape3" class="enchape3">
-                            <input type="text" placeholder="enchape4" class="enchape4">
-                        </li>          
-                        <li>
-                            <input type="submit" name="Enviar">
-                        </li>              
-                    </ul>
-             </div>
+        <div class="lavaplato">
+            <p>Lavaplato</p>
+                <button id="costadoA-mostrar" type="button">Costado Derecho</button>
+                    <div id="costadoA-ocultar">
+                            <ul>
+                                <li>
+                                    <input type="text" placeholder="Alto" class="alto">
+                                </li>
+                                <li>
+                                    <input type="text" placeholder="Ancho" class="ancho">
+                                </li>
+                                <li class="enchapes">
+                                    <input type="text" placeholder="enchape1" class="enchape1">
+                                    <input type="text" placeholder="enchape2" class="enchape2">
+                                    <input type="text" placeholder="enchape3" class="enchape3">
+                                    <input type="text" placeholder="enchape4" class="enchape4">
+                                </li>          
+                                <li>
+                                    <input type="submit" name="Enviar">
+                                </li>              
+                            </ul>
+                    </div>
+                <button id="costadoB-mostrar" type="button">Costado Izquierdo</button>
+                    <div id="costadoB-ocultar">
+                            <ul>
+                                <li>
+                                    <input type="text" placeholder="Alto" class="alto">
+                                </li>
+                                <li>
+                                    <input type="text" placeholder="Ancho" class="ancho">
+                                </li>
+                                <li class="enchapes">
+                                    <input type="text" placeholder="enchape1" class="enchape1">
+                                    <input type="text" placeholder="enchape2" class="enchape2">
+                                    <input type="text" placeholder="enchape3" class="enchape3">
+                                    <input type="text" placeholder="enchape4" class="enchape4">
+                                </li>          
+                                <li>
+                                    <input type="submit" name="Enviar">
+                                </li>              
+                            </ul>
+                    </div>
+                <button id="repisa1-mostrar" type="button">Repisa Central</button>
+                    <div id="repisa1-ocultar">
+                            <ul>
+                                <li>
+                                    <input type="text" placeholder="Alto" class="alto">
+                                </li>
+                                <li>
+                                    <input type="text" placeholder="Ancho" class="ancho">
+                                </li>
+                                <li class="enchapes">
+                                    <input type="text" placeholder="enchape1" class="enchape1">
+                                    <input type="text" placeholder="enchape2" class="enchape2">
+                                    <input type="text" placeholder="enchape3" class="enchape3">
+                                    <input type="text" placeholder="enchape4" class="enchape4">
+                                </li>          
+                                <li>
+                                    <input type="submit" name="Enviar">
+                                </li>              
+                            </ul>
+                    </div> 
+                <button id="repisa2-mostrar" type="button">Base</button>
+                    <div id="repisa2-ocultar">
+                            <ul>
+                                <li>
+                                    <input type="text" placeholder="Alto" class="alto">
+                                </li>
+                                <li>
+                                    <input type="text" placeholder="Ancho" class="ancho">
+                                </li>
+                                <li class="enchapes">
+                                    <input type="text" placeholder="enchape1" class="enchape1">
+                                    <input type="text" placeholder="enchape2" class="enchape2">
+                                    <input type="text" placeholder="enchape3" class="enchape3">
+                                    <input type="text" placeholder="enchape4" class="enchape4">
+                                </li>          
+                                <li>
+                                    <input type="submit" name="Enviar">
+                                </li>              
+                            </ul>
+                    </div>
+                <button id="lavaplato-mostrar" type="button">Medidas Lavaplato</button>
+                    <div id="lavaplato-ocultar">
+                            <ul>
+                                <li>
+                                    <input type="text" placeholder="Alto" class="alto">
+                                </li>
+                                <li>
+                                    <input type="text" placeholder="Ancho" class="ancho">
+                                </li>
+                                <li class="empotrado">
+                                    <p>¿El lavaplato es empotrado o Sobrepuesto?</p>
+                                    <label for="">
+                                        <input type="checkbox" placeholder="si" class="si" > Si
+                                    </label>
+                                    <label for="">
+                                        <input type="checkbox" placeholder="no" class="no"> No
+                                    </label>
+                                </li>          
+                                <li>
+                                    <input type="submit" name="Enviar">
+                                </li>              
+                            </ul>
+                    </div>
+        </div>
         <script>
             document.getElementById("costadoA-mostrar").addEventListener("click", function() {
                 var object = document.getElementById("costadoA-ocultar");
+                if (object.style.display === "none") {
+                    object.style.display = "block";
+                } else {
+                    object.style.display = "none";
+                }
+            });
+            document.getElementById("costadoB-mostrar").addEventListener("click", function() {
+                var object = document.getElementById("costadoB-ocultar");
+                if (object.style.display === "none") {
+                    object.style.display = "block";
+                } else {
+                    object.style.display = "none";
+                }
+            });
+            document.getElementById("repisa1-mostrar").addEventListener("click", function() {
+                var object = document.getElementById("repisa1-ocultar");
+                if (object.style.display === "none") {
+                    object.style.display = "block";
+                } else {
+                    object.style.display = "none";
+                }
+            });
+            document.getElementById("repisa2-mostrar").addEventListener("click", function() {
+                var object = document.getElementById("repisa2-ocultar");
+                if (object.style.display === "none") {
+                    object.style.display = "block";
+                } else {
+                    object.style.display = "none";
+                }
+            });
+            document.getElementById("lavaplato-mostrar").addEventListener("click", function() {
+                var object = document.getElementById("lavaplato-ocultar");
                 if (object.style.display === "none") {
                     object.style.display = "block";
                 } else {

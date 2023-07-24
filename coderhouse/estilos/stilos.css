@@ -351,6 +351,15 @@ h3.direccion{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
+.costadoBv-ocultar{
+    display: grid;
+    grid-template-areas:
+    "alto     alto     ancho    ancho" 
+    "enchape1 enchape2 enchape3 enchape4"
+    ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
 .enchape1{
     grid-area: enchape1;
     background-color: #224870;
