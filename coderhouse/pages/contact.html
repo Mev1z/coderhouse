@@ -12,39 +12,43 @@
     <header>
         <!-- Menu -->
         <nav id="menu">
-           <a href="../index.html" class="inicio"><img src="./images/logoMuebles.jpg" alt="logo empresa" class="logoMuebles"></a>
+           <a href="../index.html" class="inicio"><img src="../images/logoMuebles.jpg" alt="logo empresa" class="logoMuebles"></a>
       
-           <a href="./pages/contact.html" class="contact">Contacto</a>
-           <a href="./pages/obra.html" class="obra">Obra</a>
-           <a href="./pages/personal.html" class="personal">Personal</a>
-           <a href="./pages/productos.html" class="productos">Productos</a>
-           
-           <a href="./pages/ingreso.html" class="ingreso">Ingreso</a>
+           <a href="../pages/contact.html" class="contact">Contacto</a>
+           <a href="../pages/productos.html" class="productos">Productos</a>
+           <a href="../pages/ingreso.html" class="ingreso">Ingreso</a>
        </nav>
    </header>
 
     <h1 class="titulo">Muebles del Maule</h1>
 
     <p>¡Nos encantaria trabajar contigo en tu proximo proyecto! Dejanos un mensaje con lo que quieres hacer y te contactaremos lo antes posible.</p>
-    
+    <p>Puedes subir tu cuaderno de ideas para que lo podamos revisar</p>
+   <div class="formulario-contacto">
+        <form action="submit-form.php" method="POST">
+            <label for="name"></label>
+            <input type="text" id="nombre" placeholder="Nombre" name="nombre" required>
+        
+            <label for="email"></label>
+            <input type="email" id="email" placeholder="E-mail" name="email" required>
+        
+            <label for="message"></label>
+            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
 
-    <form action="submit-form.php" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="nombre" name="nombre" required>
-    
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-    
-        <label for="message">Message:</label>
-        <textarea id="mensaje" name="mensaje" required></textarea>
-    
-        <input type="submit" value="Enviar">
-      </form>
+            <button id="insert">Adjunta tu cuaderno de ideas</button>
+            <p>Recuerda que los archivos permitidos son .pdf .doc o .docx </p>
+            <canvas id="canvas" width="800" height="600"></canvas>
+            <script src="../estilos/script.js"></script>
+            
+            <input type="submit" id="enviar-solicitud" value="Enviar">
+        </form>
+    </div>
   
       <footer id="pie">
         <a href="https://www.instagram.com/">
             <img src="../images/logoInstagram.png" alt="logo instagram" class="logoInstagram">
         </a>
+    
     </footer>
 
 </body>
