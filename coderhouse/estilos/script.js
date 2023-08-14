@@ -49,3 +49,4 @@ reader.readAsText(selectedFile){
     function isValidPassword(password) {
         return password.length >= 6;
     }
+

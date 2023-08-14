@@ -7,13 +7,37 @@ body{
     color: aliceblue;
 }
 /*Afecta al menu*/
-#menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    
+.dropdown{
+    position: absolute;
+    width: 5%;
+    top: 5%;
+    right: 150px;
+    transform: translateY(-70%);
+    display: inline-block;    
 }
+.dropbtn{
+    background-color: #aed4e6;
+    color: #224870;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{
+    background-color: #f1f1f1;
+}  
 .contact{
     padding:1rem ;
     background-color: #AF7595;
@@ -47,12 +71,20 @@ body{
     margin: 2px;
 }
 .ingreso{
-    padding:1rem ;
-    background-color: #AF7595;
-    color: aliceblue;
-    width: 58px;
-    height: fit-content;
-    margin: 2px;
+    background-color: #aed4e6;
+    color: #224870;
+    width: 10%;
+    height: 25px;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    top: 5%;
+    right: 20px;
+    transform: translateY(-30%);
+}
+.ingreso:hover{
+    background-color: #224870;
+    color: #aed4e6;
 }
 .titulo{
     color: #FFFCFF;
@@ -160,8 +192,9 @@ h3.direccion{
 }
 /*Se hace referencia a la pagina de obra*/
 .plano{
-    width: 50vw;
-    height: 50%;
+    width: 500px;
+    height: 500px;
+    align-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -170,191 +203,571 @@ h3.direccion{
         "CA-T319 sala-multiusoK CA-T121 CA-T223 CA-T425 CA-T127 sala-multiusoP sala-multiusoP"
         "CB-T418 street         street  street  street  street  street         CB-T430"
         "CA-T417 street         street  street  street  street  street         CA-T429"
-        "CB-T316 street         street  street  street  street  street         CB-T132"
-        "CA-T315 street         street  street  street  street  street         CA-T131"
-        "CB-T114 street         street  street  street  street  street         CB-T234"
-        "CA-T113 street         street  street  street  street  street         CA-T233"
+        "CB-T316 street         parque  parque  street  parque  street         CB-T132"
+        "CA-T315 street         parque  parque  street  parque  street         CA-T131"
+        "CB-T114 street         parque  parque  street  street  street         CB-T234"
+        "CA-T113 street         parque  parque  street  street  street         CA-T233"
         "CB-T312 street         CB-T464 CB-T452 street  CB-T140 CB-T138        CB-T436"
         "CA-T311 street         CA-T463 CA-T451 street  CA-T139 CA-T137        CA-T435"
-        "CB-T410 street         CB-T366 CB-T354 street  CB-T442"
-        "CA-T49  street         CA-T365 CA-T353 street  CA-T441"
-        "CB-T38  street         CB-T268 CB-T256 street  CB-T344"
-        "CA-T37  street         CA-T267 CA-T255 street  CA-T343"
-        "CB-T16  street         CB-T170 CB-T158 street  CB-T146"
-        "CA-T15  street         CA-T169 CA-T157 street  CA-T145"
-        "CB-T34  street         CB-T372 CB-T360 street  CB-T348"
-        "CA-T33  street         CA-T371 CA-T359 street  CA-T347"
-        "CB-T42  street         CB-T474 CB-T462 street  CB-T450"
-        "CA-T41  street         CA-T473 CA-T461 street  CA-T449";
+        "CB-T410 street         CB-T366 CB-T354 street  CB-T442 blanco         blanco"
+        "CA-T409 street         CA-T365 CA-T353 street  CA-T441 blanco         blanco"
+        "CB-T308 street         CB-T268 CB-T256 street  CB-T344 blanco         blanco"
+        "CA-T307 street         CA-T267 CA-T255 street  CA-T343 blanco         blanco"
+        "CB-T106 street         CB-T170 CB-T158 street  CB-T146 blanco         blanco"
+        "CA-T105 street         CA-T169 CA-T157 street  CA-T145 blanco         blanco"
+        "CB-T304 street         CB-T372 CB-T360 street  CB-T348 blanco         blanco"
+        "CA-T303 street         CA-T371 CA-T359 street  CA-T347 blanco         blanco"
+        "CB-T402 street         CB-T474 CB-T462 street  CB-T450 blanco         blanco"
+        "CA-T401 street         CA-T473 CA-T461 street  CA-T449 blanco         blanco";
 }
-.CA-T131{
-    grid-area: CA-T131;
+.parque{
+    position: relative;
+    color: rgb(9, 139, 9);
+}
+.blanco{
+    grid-area: blanco;
+    position: relative;
+}
+.CA-T401{
+    grid-area: CA-T401;
     background-color: #224870;
     color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T402{
+    grid-area: CB-T402;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T303{
+    grid-area: CA-T303;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T304{
+    grid-area: CB-T304;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T105{
+    grid-area: CA-T105;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T106{
+    grid-area: CB-T106;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T307{
+    grid-area: CA-T307;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T308{
+    grid-area: CB-T308;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T409{
+    grid-area: CA-T409;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T410{
+    grid-area: CB-T410;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T311{
+    grid-area: CA-T311;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T312{
+    grid-area: CB-T312;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T113{
+    grid-area: CA-T113;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T114{
+    grid-area: CB-T114;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
 }
 .CA-T315{
     grid-area: CA-T315;
     background-color: #224870;
     color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
-}
-.CB-T132{
-    grid-area: CB-T132;
-    background-color: #224870;
-    color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
+    font-size: 5px;
+    margin: 0px;
 }
 .CB-T316{
     grid-area: CB-T316;
     background-color: #224870;
     color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
-}
-.CA-T429{
-    grid-area: CA-T429;
-    background-color: #224870;
-    color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
+    font-size: 5px;
+    margin: 0px;
 }
 .CA-T417{
     grid-area: CA-T417;
     background-color: #224870;
     color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
-}
-.CB-T430{
-    grid-area: CB-T430;
-    background-color: #224870;
-    color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
+    font-size: 5px;
+    margin: 0px;
 }
 .CB-T418{
     grid-area: CB-T418;
     background-color: #224870;
     color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
-}
-.CA-T127{
-    grid-area: CA-T127;
-    background-color: #224870;
-    color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
-}
-.CA-T425{
-    grid-area: CA-T425;
-    background-color: #224870;
-    color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
-}
-.CA-T223{
-    grid-area: CA-T223;
-    background-color: #224870;
-    color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
-}
-.CA-T121{
-    grid-area: CA-T121;
-    background-color: #224870;
-    color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
-}
-.CB-T320{
-    grid-area: CB-T320;
-    background-color: #224870;
-    color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
+    font-size: 5px;
+    margin: 0px;
 }
 .CA-T319{
     grid-area: CA-T319;
     background-color: #224870;
     color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
+    font-size: 5px;
+    margin: 0px;
 }
-.sala-multiusoK{
-    grid-area: sala-multiusoK;
+.CB-T320{
+    grid-area: CB-T320;
     background-color: #224870;
     color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
+    font-size: 5px;
+    margin: 0px;
 }
-.sala-multiusoP{
-    grid-area: sala-multiusoP;
+.CA-T121{
+    grid-area: CA-T121;
     background-color: #224870;
     color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
+    font-size: 5px;
+    margin: 0px;
 }
-.CB-T122{
-    grid-area: CB-T122;
+.CA-T122{
+    grid-area: CA-T122;
     background-color: #224870;
     color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T223{
+    grid-area: CA-T223;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
 }
 .CB-T224{
     grid-area: CB-T224;
     background-color: #224870;
     color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T425{
+    grid-area: CA-T425;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
 }
 .CB-T426{
     grid-area: CB-T426;
     background-color: #224870;
     color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T127{
+    grid-area: CA-T127;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
 }
 .CB-T128{
     grid-area: CB-T128;
     background-color: #224870;
     color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T429{
+    grid-area: CA-T429;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T430{
+    grid-area: CB-T430;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T131{
+    grid-area: CA-T131;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T132{
+    grid-area: CB-T132;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T233{
+    grid-area: CA-T233;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T234{
+    grid-area: CB-T234;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T435{
+    grid-area: CA-T435;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T436{
+    grid-area: CB-T436;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T137{
+    grid-area: CA-T137;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T138{
+    grid-area: CB-T138;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T139{
+    grid-area: CA-T139;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T140{
+    grid-area: CB-T140;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T441{
+    grid-area: CA-T441;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T442{
+    grid-area: CB-T442;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T343{
+    grid-area: CA-T343;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T344{
+    grid-area: CB-T344;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T145{
+    grid-area: CA-T145;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T146{
+    grid-area: CB-T146;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T347{
+    grid-area: CA-T347;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T348{
+    grid-area: CB-T348;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T449{
+    grid-area: CA-T449;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T450{
+    grid-area: CB-T450;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T451{
+    grid-area: CA-T451;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T452{
+    grid-area: CB-T452;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T353{
+    grid-area: CA-T353;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T354{
+    grid-area: CB-T354;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T355{
+    grid-area: CA-T355;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T356{
+    grid-area: CB-T356;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T157{
+    grid-area: CA-T157;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T158{
+    grid-area: CB-T158;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T359{
+    grid-area: CA-T359;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T360{
+    grid-area: CB-T360;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T461{
+    grid-area: CA-T461;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T462{
+    grid-area: CB-T462;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T463{
+    grid-area: CA-T463;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T464{
+    grid-area: CB-T464;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T365{
+    grid-area: CA-T365;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T366{
+    grid-area: CB-T366;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T267{
+    grid-area: CA-T267;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T268{
+    grid-area: CB-T268;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T169{
+    grid-area: CA-T169;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T170{
+    grid-area: CB-T170;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T371{
+    grid-area: CA-T371;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T372{
+    grid-area: CB-T372;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CA-T473{
+    grid-area: CA-T473;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.CB-T474{
+    grid-area: CB-T474;
+    background-color: #224870;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
 }
 .street{
     grid-area: street;
     background-color: #78797a;
     color: #B0A204;
-    font-size:.6em;
-    text-align: center;
-    margin: 1px;
+    font-size: 5px;
+    margin: 0px;
 }
+.sala-multiusoK{
+    grid-area: sala-multiusoK;
+    background-color: #78797a;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+.sala-multiusoP{
+    grid-area: sala-multiusoP;
+    background-color: #78797a;
+    color: #B0A204;
+    font-size: 5px;
+    margin: 0px;
+}
+/*Aqui hace referencia a la pagina de cbt320*/
 .costadoA-ocultar{
     display: grid;
     grid-template-areas:
@@ -446,4 +859,16 @@ h3.direccion{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+/*Aqui hace referencia a la pagina de productos*/
+.puerta-norte-curico{
+    width: 500px;
+    height: auto;
+    border-radius: 1px;
+    border-color: #aed4e6;
+    border: 2px;
+}
+.closet-curico{
+    align-items: center;
+    
 }
